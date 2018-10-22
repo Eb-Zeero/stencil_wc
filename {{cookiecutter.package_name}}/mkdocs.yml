@@ -1,0 +1,2 @@
+site_name: {{ cookiecutter.package_name }}
+theme: readthedocs

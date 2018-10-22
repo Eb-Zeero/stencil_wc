@@ -1,0 +1,12 @@
+{
+  "package_name": "stencil-web-components",
+  "version": "0.1.0",
+  "description": "Stencil web components",
+  "component_tag": "hello-world",
+  "namespace": "helloworld",
+  "component_directory": "{{ cookiecutter.component_tag }}",
+  "component_class": "HelloWorld",
+  "github_username": "",
+  "author": "your name",
+  "license": "MIT"
+}
