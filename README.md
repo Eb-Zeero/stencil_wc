@@ -1,15 +1,18 @@
-# cookiecutter-web-components
+# cookiecutter of web components
 
-A boilerplate for a Node package defining web components, using Jest, Puppeteer, ESLint and mkdocs.
+A boilerplate for a Node package defining web components, using Stencil. The same task can be achieved by running `npm init stencil` which will create the default setting of this cookiecutter plus extra tests
 
 ## Getting started
+
+### Note:
+This project is influenced Stenciljs which is not a framework. you can read more about Stenciljs [here](https://stenciljs.com/)
 
 Ensure that [cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) is installed on your computer.
 
 You can then create a new web components project by using cookiecutter with this template:
 
 ```bash
-cookiecutter https://github.com/saltastro/cookiecutter-web-components.git
+cookiecutter https://github.com/Eb-Zeero/stencil_wc.git
 ```
 
 cookiecutter installs all the required Node packages.
@@ -32,7 +35,9 @@ When using the template, cookiecutter asks you for various input:
 
 * `component_tag`. The tag name for the generated web component. This must conform to the rules for naming web components. In particular, it must contain a hyphen.
 
-* `component_directory`. The directory where the files for the wqeb component are stored. By default the tag name is used.
+* `namespace`. The full name of this web component without space or special character. It is not bounded to this this rule.
+
+* `component_directory`. The directory where the files for the web component are stored. By default the tag name is used.
 
 * `component_class`. The name of the class representing the web component.
 
@@ -42,29 +47,24 @@ When using the template, cookiecutter asks you for various input:
 
 * `license`. The license (type) for the package. This is used for the `package.json` file. If the default `MIT` is kept, a license file is generated.
 
-* `test_server_port`. The port on which a test server should listen. Both the `test` and the `start` task defined in the `package.json` file make use of a test server.
-
-## Configuring the project
-
-Various bits and pieces of a newly generated project need to be tweaked.
 
 ### Modify the web component
 
-The generated web component just renders a `div` element with `Hello World` as its content. You can find the component's directory in the `components/` directory.
+The generated web component just renders a `div` element with `Hello World! I'm (project Author)` as its content. You can find the component's directory in the `components/` directory.
 
-You may rename or add web components. If so, you have to update the file `src/index.html` accordingly. You might also want to update the test html in the configuration file `webpack/webpack.config.development.js`.
+You may rename or add web components. If so, you have to update the file `src/index.html` accordingly.
+
+Styles of you component can be added to the css file within the components director 
 
 ### Add tests
 
 Apart from the file defining the web component itself, the component's directory also contains a test file. You need to modify the existing test and add further tests as required. If you don't want to include any tests at all, you have to remove the test file.
 
-Thanks to the [jest-puppeteer](https://github.com/smooth-code/jest-puppeteer) preset used, Puppeteer's `browser` and `page` variables are directly available as global variables in Jest tests. There is no need to explicitly construct them in your tests.
-
 ### Add documentation
 
 You may have to update the documentation in three places:
 
-1. The `README.md` file in the root directory.
+1. The `readme.md` file in the root directory.
 2. The content of the `docs/` folder.
 3. The mkdocs configuration in the `mkdocs.yml` file in the root directory.
 
@@ -80,10 +80,6 @@ repo_url: https://github.com/your-username/hello-world/
 edit_uri: blob/master/docs/
 ``` 
 
-### Configure the build process
-
-If you need to tweak the build process, you may edit the webpack configuration files in the `webpack` folder.
-
 ### Configure the linting rules
 
 If you are not happy with the linting rules, you may edit the `.eslintrc` configuration file.
@@ -94,7 +90,7 @@ It is a good idea to create a Github repository for your project. Update the res
 
 ## Testing your web component(s)
 
-Both manual and automated end-to-enf testing are supported.
+Both manual and automated end-to-end testing are supported.
 
 In order to manually test web components, run `npm`'s start task:
 
@@ -102,7 +98,8 @@ In order to manually test web components, run `npm`'s start task:
 npm start
 ```
 
-This will build your project and fire up a test server with some test html. The test html is defined within the configuration file `webpack/webpack.config.development.js`. You may have to update the html, especially if your web component has attributes or if you need to test more than one web component. Your component(s) will automatically be rebuilt, and the browser content reloaded, whenever you make changes to any of the files.
+This will build your project and fire up a test server with some test html. 
+You may have to update the html, especially if your web component has attributes or if you need to test more than one web component. Your component(s) will automatically be rebuilt, and the browser content reloaded, whenever you make changes to any of the files.
 
 Automated testing is possible with the `test` task:
 
@@ -120,13 +117,11 @@ The `package.json` file defines a couple of tasks:
 
 * `build`. Create a production build of the package.
 
-* `build:dev`. Create a development build of the package.
-
 * `test`. Run automated end-to-end tests. See the section on testing for more details.
 
 * `lint`. Run ESLint on the source code.
 
-* `lint:fix`. Run ESLint on the source code. Linting errors will be fixed if possible.
+* `lint-fix`. Run ESLint on the source code. Linting errors will be fixed if possible.
 
 * `docs`. Use mkdocs to build the documentation site. You only need this task if you are not using [Read the Docs](https://readthedocs.org) for serving your documentation.
 
@@ -135,7 +130,6 @@ Here is how you would run these tasks:
 ```bash
 npm start
 npm run build
-npm run build:dev
 npm test
 npm run lint
 npm run lint:fix

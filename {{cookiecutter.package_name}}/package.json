@@ -13,7 +13,10 @@
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "lint": "eslint src/ webpack/",
+    "lint-fix": "eslint --fix src/ webpack/",
+    "docs": "mkdocs build"
   },
   "dependencies": {},
   "author": "{{ cookiecutter.author }}",
