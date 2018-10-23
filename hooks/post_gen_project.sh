@@ -10,5 +10,4 @@ fi
 
 # install the required Node packages
 
-npm install --save-dev \
-    "@stencil/core": "~0.13.2"
+npm install --save-dev @stencil/core
