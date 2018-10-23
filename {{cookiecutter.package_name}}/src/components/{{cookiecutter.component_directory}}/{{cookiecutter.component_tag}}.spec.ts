@@ -1,6 +1,6 @@
-import { MyComponent } from './{{cookiecutter.-component_tag}}';
+import { MyComponent } from './{{cookiecutter.component_tag}}';
 
-describe('{{cookiecutter.-component_tag}}', () => {
+describe('{{cookiecutter.component_tag}}', () => {
   it('builds', () => {
     expect(new MyComponent()).toBeTruthy();
   });
