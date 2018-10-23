@@ -10,7 +10,7 @@ export class {{cookiecutter.component_class}} {
 
   format(): string {
     return (
-      (this.first || '')
+      (this.name || '')
     );
   }
 
