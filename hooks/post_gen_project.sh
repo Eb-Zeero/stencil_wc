@@ -10,7 +10,7 @@ fi
 
 # install the required Node packages
 
-npm install --save-dev @stencil/core/ \
+npm install --save-dev \
     regenerator-runtime \
     eslint \
     eslint-config-standard \
@@ -19,3 +19,4 @@ npm install --save-dev @stencil/core/ \
     eslint-plugin-import \
     eslint-plugin-node \
     eslint-plugin-jest \
+    @stencil/core
