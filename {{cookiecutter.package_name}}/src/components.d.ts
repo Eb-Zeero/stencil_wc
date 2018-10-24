@@ -26,7 +26,7 @@ declare global {
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.{{cookiecutter.component_class}}Attributes;
+    '{{cookiecutter.component_tag}}': Components.{{cookiecutter.component_class}}Attributes;
   }
 
 
@@ -37,11 +37,11 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTML{{cookiecutter.component_class}}Element
+    '{{cookiecutter.component_tag}}': HTML{{cookiecutter.component_class}}Element
   }
 
   interface ElementTagNameMap {
-    'my-component': HTML{{cookiecutter.component_class}}Element;
+    '{{cookiecutter.component_tag}}': HTML{{cookiecutter.component_class}}Element;
   }
 
 

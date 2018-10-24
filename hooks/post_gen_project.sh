@@ -12,6 +12,7 @@ fi
 
 npm install --save-dev \
     regenerator-runtime \
+    tslint \
     eslint \
     eslint-config-standard \
     eslint-plugin-standard \
@@ -20,4 +21,6 @@ npm install --save-dev \
     eslint-plugin-node \
     eslint-plugin-jest \
     eslint-config-prettier \
+
+    typescript \
     @stencil/core

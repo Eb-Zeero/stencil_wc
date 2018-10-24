@@ -8,13 +8,13 @@ describe('{{cookiecutter.component_tag}}', () => {
   describe('formatting', () => {
     it('returns empty string for no names defined', () => {
       const component = new {{cookiecutter.component_class}}();
-      expect(component.format()).toEqual('');
+      expect(component.formatPrivate()).toEqual('');
     });
 
     it('formats just first names', () => {
       const component = new {{cookiecutter.component_class}}();
       component.name = 'Joseph';
-      expect(component.format()).toEqual('Joseph');
+      expect(component.formatPrivate()).toEqual('Joseph');
     });
 
   });
