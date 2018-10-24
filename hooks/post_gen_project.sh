@@ -19,4 +19,5 @@ npm install --save-dev \
     eslint-plugin-import \
     eslint-plugin-node \
     eslint-plugin-jest \
+    eslint-config-prettier \
     @stencil/core

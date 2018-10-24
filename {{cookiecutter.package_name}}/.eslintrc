@@ -1,6 +1,7 @@
 {
   "extends": [
     "standard",
+    "prettier",
     "plugin:jest/recommended"
   ],
   "plugins": [
@@ -14,7 +15,11 @@
     "page": true
   },
   "rules": {
-    "space-before-function-paren": 0
+    "space-before-function-paren": 0,
+    "comma-dangle" : [2, "always-multiline"],
+    "semi": [2, "never"],
+    "no-extra-semi": 2,
+    "jsx-quotes": [2, "prefer-single"]
   }
 }
 

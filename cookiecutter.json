@@ -1,12 +1,14 @@
 {
-  "package_name": "stencil-web-components",
+  "project_name": "hello-worlds",
+  "package_name": "{{ cookiecutter.project_name }}",
   "version": "0.1.0",
-  "description": "Hello world Stencil web components",
+  "description": "Hello world web component",
   "component_tag": "hello-world",
-  "namespace": "helloworld",
+  "namespace": "{{ cookiecutter.component_tag|lower|replace('-', '')|replace('_', '')|replace(' ', '') }}",
   "component_directory": "{{ cookiecutter.component_tag }}",
-  "component_class": "HelloWorld",
+  "component_class": "{{ cookiecutter.package_name|replace('-', ' ')|replace('_', ' ')|title()|replace(' ', '') }}",
   "github_username": "",
+  "github_repository": "",
   "author": "your name",
   "license": "MIT"
 }
