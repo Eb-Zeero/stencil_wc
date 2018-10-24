@@ -1,6 +1,6 @@
 # cookiecutter of web components
 
-A boilerplate for a Node package defining web components, using Stencil. The same task can be achieved by running `npm init stencil` which will create the default setting of this cookiecutter plus extra tests
+A boilerplate for a Node package defining web components, using Stencil.
 
 ## Getting started
 
@@ -26,6 +26,8 @@ npm start
 ## cookiecutter input
 
 When using the template, cookiecutter asks you for various input:
+
+* `project_name`. The name for your project. It only define a root directory where you project .
 
 * `package_name`. The package name for your project. This is also taken to be the Github repository name. It must be a valid Node package name.
 
