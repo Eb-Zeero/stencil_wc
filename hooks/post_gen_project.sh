@@ -21,6 +21,5 @@ npm install --save-dev \
     eslint-plugin-node \
     eslint-plugin-jest \
     eslint-config-prettier \
-
     typescript \
     @stencil/core
