@@ -20,6 +20,15 @@
     "semi": [2, "never"],
     "no-extra-semi": 2,
     "jsx-quotes": [2, "prefer-single"]
-  }
+  },
+  "overrides": [
+    {
+      "files": [ "bin/*.js", "lib/*.js" ],
+      "excludedFiles": "*.html",
+      "rules": {
+        "quotes": [ 2, "single" ]
+      }
+    }
+  ]
 }
 

@@ -6,15 +6,26 @@ describe('{{cookiecutter.component_tag}}', () => {
   });
 
   describe('formatting', () => {
-    it('returns empty string for no names defined', () => {
+    it('returns Private string for no names defined with private method', () => {
       const component = new {{cookiecutter.component_class}}();
-      expect(component.formatPrivate()).toEqual('');
+      expect(component.formatPrivate()).toEqual('Private');
     });
 
-    it('formats just first names', () => {
+    it('formats name with private method', () => {
       const component = new {{cookiecutter.component_class}}();
       component.name = 'Joseph';
       expect(component.formatPrivate()).toEqual('Joseph');
+    });
+
+    it('returns Public string for no names defined with public method', () => {
+        const component = new {{cookiecutter.component_class}}();
+        expect(component.formatPublic()).toEqual('Public');
+    });
+
+    it('formats nameswith private method', () => {
+        const component = new {{cookiecutter.component_class}}();
+        component.name = 'Thomas';
+        expect(component.formatPrivate()).toEqual('Thomas');
     });
 
   });
