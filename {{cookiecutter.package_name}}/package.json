@@ -7,7 +7,9 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "files": [
-    "dist/"
+    "dist/",
+    "README.md",
+    "docs/"
   ],
   "scripts": {
     "build": "stencil build",
@@ -16,6 +18,8 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "lint": "eslint 'src/**'",
     "lint-fix": "eslint --fix 'src/**'",
+    "tslint": "tslint 'src/**'  -e \"**/**.html\"  -e \"**/**.css\" ",
+    "tslint-fix": "tslint --fix 'src/**'  -e \"**/**.html\"  -e \"**/**.css\"",
     "docs": "mkdocs build"
   },
   "dependencies": {},

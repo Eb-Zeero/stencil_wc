@@ -11,15 +11,20 @@ fi
 # install the required Node packages
 
 npm install --save-dev \
-    regenerator-runtime \
-    tslint \
     eslint \
     eslint-config-standard \
-    eslint-plugin-standard \
-    eslint-plugin-promise \
-    eslint-plugin-import \
-    eslint-plugin-node \
-    eslint-plugin-jest \
     eslint-config-prettier \
+    eslint-plugin-standard \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-node \
+    eslint-plugin-promise \
+    jest \
+    jest-cli \
+    puppeteer \
+    regenerator-runtime \
     typescript \
-    @stencil/core
+    tslint \
+    @stencil/core \
+    @types/jest \
+    @types/puppeteer

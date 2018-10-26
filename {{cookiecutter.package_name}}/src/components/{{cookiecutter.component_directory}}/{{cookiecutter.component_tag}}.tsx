@@ -1,9 +1,9 @@
-import { Component, Prop, Method } from '@stencil/core';
+import { Component, Method, Prop } from '@stencil/core';
 
 @Component({
-  tag: '{{cookiecutter.component_tag}}',
+  shadow: true,
   styleUrl: '{{cookiecutter.component_tag}}.css',
-  shadow: true
+  tag: '{{cookiecutter.component_tag}}'
 })
 export class {{cookiecutter.component_class}} {
   @Prop() name: string;
@@ -12,23 +12,23 @@ export class {{cookiecutter.component_class}} {
    * Public methods API
    * These methods are exposed on the host element.
    */
-  @Method() formatPublic(): string {
+  @Method() public formatPublic(): string {
         return (
             (this.name || 'Public')
         );
-    };
+    }
   /**
    * Private methods API
    * These methods are only available to this Element.
    */
-  formatPrivate(): string {
+  private formatPrivate(): string {
     return (
       (this.name || 'Private')
     );
   }
 
   /**
-   *Component lifecycle events
+   * Component lifecycle events
    * Ordered by their natural call order, for example
    * WillLoad should go before DidLoad.
    */

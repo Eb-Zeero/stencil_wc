@@ -9,6 +9,7 @@
     "no-bitwise": true,
     "no-conditional-assignment": true,
     "no-consecutive-blank-lines": false,
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"],
     "no-console": {
       "severity": "warning",
       "options": [
@@ -29,6 +30,7 @@
   "linterOptions": {
     "exclude": [
       "*.html",
+      "*.css",
       "bin",
       "lib/*generated.js"
     ]

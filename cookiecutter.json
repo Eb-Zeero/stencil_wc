@@ -8,7 +8,6 @@
   "component_directory": "{{ cookiecutter.component_tag }}",
   "component_class": "{{ cookiecutter.package_name|replace('-', ' ')|replace('_', ' ')|title()|replace(' ', '') }}",
   "github_username": "",
-  "github_repository": "",
   "author": "your name",
-  "license": "MIT"
+  "license": "MIT license"
 }
