@@ -1,6 +1,5 @@
 {
-  "project_name": "hello-world",
-  "package_name": "{{ cookiecutter.project_name }}",
+  "package_name": "hello-world",
   "version": "0.1.0",
   "description": "Hello world web component",
   "component_tag": "hello-world",

@@ -11,20 +11,22 @@ fi
 # install the required Node packages
 
 npm install --save-dev \
-    eslint \
-    eslint-config-standard \
-    eslint-config-prettier \
-    eslint-plugin-standard \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-node \
-    eslint-plugin-promise \
+    @stencil/core \
+    @types/jest \
+    @types/puppeteer \
     jest \
     jest-cli \
+    prettier \
+    prettier-standard \
     puppeteer \
     regenerator-runtime \
     typescript \
     tslint \
-    @stencil/core \
-    @types/jest \
-    @types/puppeteer
+    tslint-config-standard \
+    tslint-plugin-prettier
+
+
+echo -e "\e[33mGet started\e[0m"
+echo ""
+echo " cd {{cookicuter.package_name}}"
+echo " npm start"

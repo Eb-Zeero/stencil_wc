@@ -37,7 +37,7 @@ When using the template, cookiecutter asks you for various input:
 
 * `component_tag`. The tag name for the generated web component. This must conform to the rules for naming web components. In particular, it must contain a hyphen.
 
-* `namespace`. The full name of this web component without space or special character. It is not bounded to this this rule.
+* `namespace`. The namespace config is a string representing a namespace for the app. For apps that are not meant to be a library of reusable components, the default of App is just fine. However, if the app is meant to be consumed as a third-party library, a unique namespace is required. [more...](https://stenciljs.com/docs/config/#namespace)
 
 * `component_directory`. The directory where the files for the web component are stored. By default the tag name is used.
 

@@ -1,5 +1,9 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier",
+    "tslint-eslint-rules",
+    "tslint-plugin-prettier"],
   "rules": {
     "max-line-length": {
       "options": [120]
