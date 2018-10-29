@@ -27,8 +27,6 @@ npm start
 
 When using the template, cookiecutter asks you for various input:
 
-* `project_name`. The name for your project. It only define a root directory where you project .
-
 * `package_name`. The package name for your project. This is also taken to be the Github repository name. It must be a valid Node package name.
 
 * `version`. The (initial) version number for the package.
