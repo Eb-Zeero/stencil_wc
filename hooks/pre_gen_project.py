@@ -6,7 +6,7 @@ MODULE_REGEX = r'\A[^\W][a-z0-9_-]+$'
 TAG_REGEX = r'^[a-z]([a-z\d]*)(?:-[a-z\d]+)+$'
 
 module_name = '{{ cookiecutter.package_name }}'
-tag_name = '{{ cookiecutter.tag_name }}'
+tag_name = '{{ cookiecutter.component_tag }}'
 
 if not re.match(MODULE_REGEX, module_name):
     print('ERROR: The package name (%s) is not a valid module name. Please use a url friendly name ' % module_name)
