@@ -28,5 +28,5 @@ npm install --save-dev \
 
 echo -e "\e[33mGet started\e[0m"
 echo ""
-echo " cd {{cookicutter.package_name}}"
+echo " cd {{cookiecutter.package_name}}"
 echo " npm start"
