@@ -5,7 +5,7 @@ import sys
 MODULE_REGEX = r'\A[^\W][a-z0-9_-]+$'
 TAG_REGEX = r'^[a-z]([a-z\d]*)(?:-[a-z\d]+)+$'
 
-module_name = '{{ cookiecutter.project_name }}'
+module_name = '{{ cookiecutter.package_name }}'
 tag_name = '{{ cookiecutter.tag_name }}'
 
 if not re.match(MODULE_REGEX, module_name):
